@@ -46,6 +46,8 @@ export default async function getData() {
     result.map((page) => {
       try {
         const { properties } = page;
+        // KODE DI BAWAH HANYA CONTOH
+
         // const jurusan = properties["Jurusan"];
         // const angkatan = properties["Angkatan"];
         // const nama = properties["Nama"];
