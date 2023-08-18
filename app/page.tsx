@@ -1,17 +1,18 @@
-import getData from "@/lib/getData";
+import getEvent from "@/lib/getEvent";
 
 export default async function Home() {
-  const data = await getData();
+  const events = await getEvent()
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {data.map((user) => {
-        return (
-          <div className="white">
-            <p>Nama : {user.nama}</p>
-            <p>Jurusan : {user.jurusan}</p>
-            <p>Angkatan : {user.angkatan}</p>
+      {events?.map((event)=>{
+        return(
+          <div>
+            <h1>{event.name}</h1>
+            <h3>{event.subtitle}</h3>
+            <p>{event.description}</p>
+            <p>{event.date.toLocaleDateString()}</p>
           </div>
-        );
+        )
       })}
     </main>
   );
