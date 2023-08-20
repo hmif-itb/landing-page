@@ -1,38 +1,5 @@
+import { DataEvent, EventDate, Page, Text, Title } from "@/types/type";
 import { Client } from "@notionhq/client";
-import React from "react";
-
-interface DataEvent {
-  name: string;
-  subtitle: string;
-  date: Date;
-  description: string;
-}
-
-interface EventDate {
-  date: {
-    start: string;
-  };
-}
-interface SubTitle {
-  plain_text: string;
-}
-interface Description {
-  rich_text: SubTitle[];
-}
-interface subtitle {
-  rich_text: SubTitle[];
-}
-interface Name {
-  title: SubTitle[];
-}
-
-interface Page {
-  id: string;
-  object: string;
-  properties: {
-    [key: string]: EventDate | Name | Description;
-  };
-}
 
 export default async function getEvent() {
   const client = new Client({ auth: process.env.NOTION_SECRETS });
@@ -58,15 +25,15 @@ export default async function getEvent() {
           parseInt(dateArray[2]) + 1
         );
         // Destructure name property
-        const name = properties["Name"] as Name;
+        const name = properties["Name"] as Title;
         const nameValue = name.title[0].plain_text;
 
         // Destructure the description property
-        const description = properties["Description"] as Description;
+        const description = properties["Description"] as Text;
         const descValue = description.rich_text[0].plain_text;
 
         // Destrucutre the subtitle propery
-        const subtitle = properties["subtitle"] as subtitle;
+        const subtitle = properties["subtitle"] as Text;
         const subtitleValue = subtitle.rich_text[0].plain_text;
         
         dataEvents.push({
@@ -77,6 +44,6 @@ export default async function getEvent() {
         })
       } catch (error) {}
     });
-    return dataEvents;    
+    return dataEvents    
   }
 }

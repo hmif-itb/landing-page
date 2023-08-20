@@ -1,18 +1,22 @@
+import getAchievement from "@/lib/getAchievement";
 import getEvent from "@/lib/getEvent";
+import Image from "next/image";
 
 export default async function Home() {
-  const events = await getEvent()
+  const achievements = await getAchievement();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {events?.map((event)=>{
-        return(
+    <main>
+      {achievements.map((achievement) => {
+        return (
           <div>
-            <h1>{event.name}</h1>
-            <h3>{event.subtitle}</h3>
-            <p>{event.description}</p>
-            <p>{event.date.toLocaleDateString()}</p>
+            <h1>{achievement.name}</h1>
+            <p>Penyelenggara : {achievement.penyelenggara}</p>
+            <img
+              src={achievement.image}
+              alt={achievement.name}
+            />
           </div>
-        )
+        );
       })}
     </main>
   );
