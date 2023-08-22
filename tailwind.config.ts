@@ -23,6 +23,11 @@ const config: Config = {
       filter: {
         "5px": "5px",
       },
+      zIndex:{
+        "2" : "2",
+        "3" : "3",
+        "4" : "4"
+      }
     },
   },
   plugins: [],

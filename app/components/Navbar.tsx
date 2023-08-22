@@ -15,7 +15,7 @@ function Navbar() {
     setSelected(pathname.replace("/", ""));
   }, [pathname]);
   return (
-    <div className="fixed top-0 h-[90px] bg-[#F8C249] w-screen flex items-center grid gap-4 pr-8">
+    <div className="fixed top-0 h-[90px] bg-[#F8C249] w-screen flex items-center grid gap-4 pr-8 z-20 mb-12">
       <div className="ml-5 w-[100px] h-[66px]">
         <Image src="/hmif.png" width={100} height={66} alt="Logo HMIF" />
       </div>

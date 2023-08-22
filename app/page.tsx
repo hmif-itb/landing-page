@@ -4,23 +4,13 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import "./globals.css"
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 export default async function Home() {
   const achievements = await getAchievement();
   return (
     <main className="flex flex-col max-w-screen">
-      {/* {achievements.map((achievement) => {
-        return (
-          <div>
-            <h1>{achievement.name}</h1>
-            <p>Penyelenggara : {achievement.penyelenggara}</p>
-            <img
-              src={achievement.image}
-              alt={achievement.name}
-            />
-          </div>
-        );
-      })} */}
+      <About />
     </main>
   );
 }

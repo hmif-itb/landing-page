@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="max-w-screen">
         <Navbar />
         {children}
         <Footer />

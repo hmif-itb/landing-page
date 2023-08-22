@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 w-screen bg-[#1B1508] h-[300px] filter drop-shadow-lg flex flex-row items-center px-5 pt-4 shadow-2xl">
+    <div className="max-w-screen bg-[#1B1508] h-[300px] filter drop-shadow-lg flex flex-row items-center px-5 pt-4 shadow-2xl">
       {/* Logo HMIF's container */}
-      <div className="w-[343px] h-[225px]">
+      <div className="max-w-[1/3] w-[343px] h-[225px]">
         <Image src="/logo-hmif.png" alt="logo HMIF" width={343} height={225} />
       </div>
       {/* Contact Person's Container */}
