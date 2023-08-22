@@ -3,13 +3,14 @@ import getEvent from "@/lib/getEvent";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import "./globals.css"
+import Footer from "./components/Footer";
 
 export default async function Home() {
   const achievements = await getAchievement();
   return (
     <main className="flex flex-col max-w-screen">
       <Navbar />
-      {achievements.map((achievement) => {
+      {/* {achievements.map((achievement) => {
         return (
           <div>
             <h1>{achievement.name}</h1>
@@ -20,7 +21,8 @@ export default async function Home() {
             />
           </div>
         );
-      })}
+      })} */}
+      <Footer />
     </main>
   );
 }
