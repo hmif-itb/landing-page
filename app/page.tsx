@@ -9,7 +9,6 @@ export default async function Home() {
   const achievements = await getAchievement();
   return (
     <main className="flex flex-col max-w-screen">
-      <Navbar />
       {/* {achievements.map((achievement) => {
         return (
           <div>
@@ -22,7 +21,6 @@ export default async function Home() {
           </div>
         );
       })} */}
-      <Footer />
     </main>
   );
 }
