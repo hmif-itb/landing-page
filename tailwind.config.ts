@@ -27,6 +27,9 @@ const config: Config = {
         "2" : "2",
         "3" : "3",
         "4" : "4"
+      },
+      boxShadow:{
+        "1xl" : "0 4px 4px 0 rgba(0, 0, 0, 0.25)"
       }
     },
   },

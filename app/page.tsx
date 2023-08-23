@@ -5,12 +5,14 @@ import Navbar from "./components/Navbar";
 import "./globals.css"
 import Footer from "./components/Footer";
 import About from "./components/About";
+import CurrentEvent from "./components/CurrentEvent";
 
 export default async function Home() {
   const achievements = await getAchievement();
   return (
     <main className="flex flex-col max-w-screen">
       <About />
+      <CurrentEvent />
     </main>
   );
 }
