@@ -30,6 +30,11 @@ const config: Config = {
       },
       boxShadow:{
         "1xl" : "0 4px 4px 0 rgba(0, 0, 0, 0.25)"
+      },
+      minHeight:{
+        "1/2" : "50%",
+        "1/4" : "25%",
+        "3/4" : "75%",
       }
     },
   },

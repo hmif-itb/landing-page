@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 interface SliderProps {
   events: DataEvent[] | undefined;
 }
-export default function Slider({ events }: SliderProps) {
+export default function AcaraSlider({ events }: SliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevPage = () => {
@@ -21,14 +21,12 @@ export default function Slider({ events }: SliderProps) {
   };
 
   const nextPage = () => {
-    console.log("Next page");
     if (events) {
       if (currentIndex === events.length - 1) {
         setCurrentIndex(0);
       } else {
         setCurrentIndex(currentIndex + 1);
       }
-      console.log("Masuk atas");
     }
   };
 
