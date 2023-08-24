@@ -8,13 +8,7 @@ interface SliderProps {
   events: DataEvent[] | undefined;
 }
 export default function Slider({ events }: SliderProps) {
-  const [isLoading, setIsLoading] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  console.log(events);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
 
   const prevPage = () => {
     if (currentIndex === 0) {

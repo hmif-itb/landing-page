@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Slider from "../components/Slider";
+import Slider from "../components/AcaraSlider";
 import getEvent from "@/lib/getEvent";
 export default async function Acara() {
   const events = await getEvent();
@@ -10,5 +10,3 @@ export default async function Acara() {
     </div>
   );
 }
-
-// export default Acara;
