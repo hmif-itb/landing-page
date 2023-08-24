@@ -1,11 +1,14 @@
-import React from 'react'
-
-const Acara = () => {
+import React, { Component } from "react";
+import Slider from "../components/Slider";
+import getEvent from "@/lib/getEvent";
+export default async function Acara() {
+  const events = await getEvent();
+  
   return (
-    <div>
-      Ini page acara
+    <div className="relative flex items-center justify-center h-[110vh] bg-[#F8C249] max-w-screen">
+      <Slider events={events} />
     </div>
-  )
+  );
 }
 
-export default Acara
+// export default Acara;
