@@ -4,15 +4,18 @@ import LeftRectangle from "./LeftRectangle";
 import RightRectangle from "./RightRectangle";
 const About = () => {
   return (
-    <div className="relative h-[100vh] bg-[#F8C249] max-w-screen mt-12 pt-8">
-      <div className="absolute -top-16 z-10">
+    <div className="relative md:h-[100vh] bg-[#F8C249] max-w-screen mt-12 pt-8">
+      <div className="hidden md:block absolute -top-16 z-10">
         <Image width={300} height={300} src={"/Ellipse 4.png"} alt="Ellpise" />
       </div>
+      <div className="block md:hidden absolute -top-16 z-10">
+        <Image width={200} height={200} src={"/Ellipse 4.png"} alt="Ellpise" />
+      </div>
       <div className="w-full px-12 mt-8">
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-[#5D42E1] to-[#966F16] z-30 font-StretchPro text-left text-[40px]">
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-[#5D42E1] to-[#966F16] z-30 font-StretchPro text-left text-[20px] md:text-[40px]">
           Himpunan Mahasiswa Informatika
         </h1>
-        <div className="w-full grid grid-cols-2 h-[60vh] gap-x-4">
+        <div className="w-full grid md:grid-cols-2 md:h-[60vh] gap-x-4">
           <div className="relative py-4 px-5 flex items-center mt-3">
             <div className="absolute top-0 left-0">
               <LeftRectangle />
@@ -30,7 +33,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="py-4 px-5 flex items-center mt-3 font-poppins text-[#1B1508] font-semibold text-justify">
+          <div className="text-[11px] md:text-[15px] py-4 px-5 flex items-center mt-3 font-poppins text-[#1B1508] font-semibold text-justify">
             <p>
               HMIF ITB atau Himpunan Mahasiswa Informatika Institut Teknologi
               Bandung adalah sebuah organisasi yang beranggotakan mahasiswa ITB
@@ -50,8 +53,11 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="absolute -bottom-16 right-0 z-10">
+      <div className="hidden md:block absolute -bottom-16 right-0 z-10">
         <Image width={300} height={300} src={"/Ellipse 5.png"} alt="Ellpise" />
+      </div>
+      <div className="block md:hidden absolute -bottom-16 -right-12 z-10">
+        <Image width={200} height={200} src={"/Ellipse 5.png"} alt="Ellpise" />
       </div>
     </div>
   );

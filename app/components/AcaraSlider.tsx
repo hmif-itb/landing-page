@@ -76,17 +76,17 @@ export default function AcaraSlider({ events }: SliderProps) {
           </div>
           <div className="h-5/6 flex flex-col items-center">
             <div className="w-full grid grid-cols-2 min-h-2/4 gap-x-4 font-poppins text-[#1B1508] mt-8">
-              <div className="relative py-3 px-5 flex items-center justify-center mt-3">
-                <div className="absolute left-12 top-0">
+              <div className="relative py-3 px-3 mt-3 flex items-center justify-center">
+                <div className="absolute left-0 top-0">
                   <LeftRectangle />
                 </div>
-                <Image
+                <img
                   src={"/prestasi.png"}
                   alt="Acara"
                   width={300}
                   height={300}
                 />
-                <div className="absolute right-12 bottom-0">
+                <div className="absolute right-0 bottom-0">
                   <RightRectangle />
                 </div>
               </div>

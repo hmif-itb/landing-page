@@ -6,6 +6,7 @@ import "./globals.css"
 import Footer from "./components/Footer";
 import About from "./components/About";
 import CurrentEvent from "./components/CurrentEvent";
+import Prestasi from "./components/Prestasi";
 
 export default async function Home() {
   const achievements = await getAchievement();
@@ -13,6 +14,7 @@ export default async function Home() {
     <main className="flex flex-col max-w-screen">
       <About />
       <CurrentEvent />
+      <Prestasi />
     </main>
   );
 }

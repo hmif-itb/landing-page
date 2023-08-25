@@ -6,7 +6,8 @@ import RightRectangle from "./RightRectangle";
 const CurrentEvent = () => {
   return (
     <div className="relative h-[110vh] bg-[#FBE3A1] max-w-screen">
-      <div className="absolute -left-3">
+      {/* Rectangle for large devices */}
+      <div className="hidden md:block absolute -left-3">
         <Image
           className="rotate-180"
           src={"/Ellipse 4.png"}
@@ -15,14 +16,24 @@ const CurrentEvent = () => {
           height={300}
         />
       </div>
-      <div className="w-full h-full flex flex-col px-12 pt-3">
-        <p className="font-StretchPro text-[#1B1508] text-[25px]">
+      {/* Rectangle for small devices */}
+      <div className="block md:hidden absolute -left-16">
+        <Image
+          className="rotate-180"
+          src={"/Ellipse 4.png"}
+          alt="Ellipse"
+          width={200}
+          height={200}
+        />
+      </div>
+      <div className="w-full px-12 pt-3">
+        <p className="font-StretchPro text-[#1B1508] text-[11px] md:text-[25px]">
           Kegiatan yang sedang berjalan
         </p>
-        <p className="self-end mt-4 text-[40px] text-transparent bg-clip-text bg-gradient-to-b from-[#5D42E1] to-[#966F16] font-StretchPro">
+        <p className="self-end mt-4 text-[15px] md:text-[40px] text-right text-transparent bg-clip-text bg-gradient-to-b from-[#5D42E1] to-[#966F16] font-StretchPro">
           SPARTA HMIF 2022
         </p>
-        <div className="w-full grid grid-cols-2 h-5/6 gap-x-4 font-poppins text-[#1B1508] mt-8 ">
+        <div className="w-full grid md:grid-cols-2 h-5/6 gap-x-4 font-poppins text-[#1B1508] mt-8 ">
           <div className="pt-5 px-5 flex flex-col items-center font-semibold text-justify">
             <p className="text-[15px]">
               SPARTA (Simulasi dan Pelatihan Keorganisasian Untuk Anggota)
