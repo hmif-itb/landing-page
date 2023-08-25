@@ -56,7 +56,7 @@ const About = () => {
       <div className="hidden md:block absolute -bottom-16 right-0 z-10">
         <Image width={300} height={300} src={"/Ellipse 5.png"} alt="Ellpise" />
       </div>
-      <div className="block md:hidden absolute -bottom-16 -right-12 z-10">
+      <div className="block md:hidden absolute -bottom-16 right-0 z-10">
         <Image width={200} height={200} src={"/Ellipse 5.png"} alt="Ellpise" />
       </div>
     </div>
