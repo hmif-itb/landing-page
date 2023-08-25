@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import LeftRectangle from "./LeftRectangle";
+import RightRectangle from "./RightRectangle";
 const About = () => {
   return (
     <div className="relative h-[100vh] bg-[#F8C249] max-w-screen mt-12 pt-8">
@@ -13,12 +15,7 @@ const About = () => {
         <div className="w-full grid grid-cols-2 h-[60vh] gap-x-4">
           <div className="relative py-4 px-5 flex items-center mt-3">
             <div className="absolute top-0 left-0">
-              <Image
-                src={"Rectangle 14.svg"}
-                width={159}
-                height={118}
-                alt="Rectangle"
-              />
+              <LeftRectangle />
             </div>
             <div className="z-20">
               <Image
@@ -29,12 +26,7 @@ const About = () => {
               />
             </div>
             <div className="absolute bottom-0 right-0">
-              <Image
-                src={"Rectangle 15.svg"}
-                width={159}
-                height={118}
-                alt="Rectangle"
-              />
+              <RightRectangle />
             </div>
           </div>
 

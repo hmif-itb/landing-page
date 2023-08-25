@@ -2,6 +2,10 @@
 import { DataAchivement } from "@/types/type";
 import Image from "next/image";
 import React, { useState } from "react";
+import PrevArrow from "./PrevArrow";
+import NextArrow from "./NextArrow";
+import LeftRectangle from "./LeftRectangle";
+import RightRectangle from "./RightRectangle";
 
 interface SliderProps {
   achievements: DataAchivement[] | undefined;
@@ -29,14 +33,22 @@ export default function PrestasiSlider({ achievements }: SliderProps) {
     }
   };
   return (
-    <div className="relative w-full max-w-screen h-[80vh] mt-12 flex items-center justify-center">
-      <div className="absolute left-12 top-2/4" onClick={prevPage}>
-        <Image src={"prev-arrow.svg"} alt="Prev arrow" width={80} height={80} />
+    <div className="relative w-full max-w-screen h-[90vh] mt-12 flex items-center justify-center">
+      <div className="absolute -top-20 left-0">
+        <Image src={"/Ellipse 4.png"} width={300} height={300} alt="Ellipse" />
       </div>
-      <div className="absolute right-12 top-2/4" onClick={nextPage}>
-        <Image src={"next-arrow.svg"} width={80} height={80} alt="arrow" />
+      <div className="absolute -bottom-32 right-0">
+        <Image src={"/Ellipse 5.png"} width={300} height={300} alt="Ellipse" />
       </div>
-      <div className="flex bg-[#FBE3A1] h-full w-3/4 transition duration-500">
+      <div className="absolute -bottom-4 right-6">
+        <Image src={"/trophy-3.svg"} width={120} height={120} alt="trophy" />
+      </div>
+      <div className="absolute -top-8 left-6">
+        <Image src={"/trophy-2.svg"} width={120} height={120} alt="trophy" />
+      </div>
+      <PrevArrow prevPage={prevPage} />
+      <NextArrow nextPage={nextPage} />
+      <div className="flex bg-[#FBE3A1] z-10 h-[90vh] w-3/4 transition duration-500 rounded-[30px]">
         <div className="w-full px-10 py-6 h-[80vh]">
           <div className="h-1/6">
             {achievements && (
@@ -45,24 +57,30 @@ export default function PrestasiSlider({ achievements }: SliderProps) {
               </h1>
             )}
           </div>
-          <div className="h-5/6 flex items-center justify-center">
-            <div className="w-full grid grid-cols-2 min-h-2/4 gap-x-4 font-poppins text-[#1B1508] mt-8">
-              <div className="px-5 mt-3 flex flex-col font-poppins text-[#1B1508] text-[15px] font-semibold text-justify">
-                <p>
-                  {achievements && achievements[currentIndex].penyelenggara}
-                </p>
-              </div>
-              <div className="relative px-5 flex justify-center items-center">
-                {achievements && (
+          <div className="h-5/6 flex flex-col items-center justify-center">
+            {achievements && (
+              <>
+                <div className="relative py-3 px-3 max-h-[320px]">
+                  <div className="absolute -top-2 -left-4">
+                    <LeftRectangle />
+                  </div>
+                  <div className="absolute -bottom-4 -right-4">
+                    <RightRectangle />
+                  </div>
                   <img
                     src={achievements[currentIndex].image}
-                    alt="Acara"
                     width={300}
                     height={300}
+                    alt={achievements[currentIndex].name}
                   />
-                )}
-              </div>
-            </div>
+                </div>
+                <div className="flex flex-col font-poppins text-[#1B1508] text-[18px] font-semibold text-center mt-4">
+                  <p>Penyelenggara :</p>
+                  <p>{achievements[currentIndex].penyelenggara}</p>
+                </div>
+
+              </>
+            )}
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import LeftRectangle from "./LeftRectangle";
+import RightRectangle from "./RightRectangle";
 
 const CurrentEvent = () => {
   return (
@@ -55,20 +57,10 @@ const CurrentEvent = () => {
           </div>
           <div className="relative pt-5 px-5">
             <div className="absolute top-0 left-0">
-              <Image
-                src={"/Rectangle 14.svg"}
-                width={159}
-                height={118}
-                alt="Rectangle decoration"
-              />
+              <LeftRectangle />
             </div>
             <div className="absolute bottom-0 right-8">
-              <Image
-                src={"/Rectangle 15.svg"}
-                width={159}
-                height={118}
-                alt="Rectangle Decoration"
-              />
+              <RightRectangle />
             </div>
             <div className="absolute top-4 left-8 z-10">
               <Image

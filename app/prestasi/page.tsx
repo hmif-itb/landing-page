@@ -6,7 +6,7 @@ export default async function Prestasi() {
   const achievements = await getAchievement();
 
   return (
-    <div className="flex items-center justify-center h-[110vh] ">
+    <div className="flex items-center justify-center h-[110vh] bg-[#F8C249] max-w-screen ">
       <PrestasiSlider achievements={achievements} />
     </div>
   );

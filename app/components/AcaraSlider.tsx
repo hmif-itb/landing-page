@@ -3,6 +3,10 @@ import getEvent from "@/lib/getEvent";
 import { DataEvent } from "@/types/type";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import PrevArrow from "./PrevArrow";
+import NextArrow from "./NextArrow";
+import LeftRectangle from "./LeftRectangle";
+import RightRectangle from "./RightRectangle";
 
 interface SliderProps {
   events: DataEvent[] | undefined;
@@ -31,14 +35,32 @@ export default function AcaraSlider({ events }: SliderProps) {
   };
 
   return (
-    <div className="relative w-5/6 h-[80vh] mt-12 flex items-center justify-center">
-      <div className="absolute left-0 top-2/4" onClick={prevPage}>
-        <Image src={"prev-arrow.svg"} width={80} height={80} alt="arrow" />
+    <div className="relative w-full h-[80vh] mt-12 flex items-center justify-center">
+      <div className="absolute -top-20 left-0">
+        <Image src={"/Ellipse 4.png"} width={300} height={300} alt="Ellipse" />
       </div>
-      <div className="absolute right-0 top-2/4" onClick={nextPage}>
-        <Image src={"next-arrow.svg"} width={80} height={80} alt="arrow" />
+      <div className="absolute -bottom-32 right-0">
+        <Image src={"/Ellipse 5.png"} width={300} height={300} alt="Ellipse" />
       </div>
-      <div className="flex bg-[#FBE3A1] h-full w-3/4 transition duration-500">
+      <div className="absolute -bottom-4 right-6">
+        <Image 
+          src={"/megaphone-3.svg"}
+          width={120}
+          height={120}
+          alt="Megaphone"
+        />
+      </div>
+      <div className="absolute -top-8 left-6">
+        <Image 
+          src={"/megaphone-2.svg"}
+          width={120}
+          height={120}
+          alt="Megaphone"
+        />
+      </div>
+      <PrevArrow prevPage={prevPage} />
+      <NextArrow nextPage={nextPage} />
+      <div className="flex bg-[#FBE3A1] z-10 h-full w-3/4 transition duration-500 rounded-[30px]">
         <div className="w-full px-10 py-6 h-[80vh]">
           <div className="h-1/6">
             {events && (
@@ -52,18 +74,25 @@ export default function AcaraSlider({ events }: SliderProps) {
               </>
             )}
           </div>
-
-          <div className="w-full grid grid-cols-2 h-2/4 gap-x-4 font-poppins text-[#1B1508] mt-8">
-            <div className="relative px-5 flex items-center mt-3">
-              <Image
-                src={"/prestasi.png"}
-                alt="Acara"
-                width={440}
-                height={440}
-              />
-            </div>
-            <div className="px-5 mt-3 flex flex-col font-poppins text-[#1B1508] text-[15px] font-semibold text-justify">
-              <p>{events && events[currentIndex].description}</p>
+          <div className="h-5/6 flex flex-col items-center">
+            <div className="w-full grid grid-cols-2 min-h-2/4 gap-x-4 font-poppins text-[#1B1508] mt-8">
+              <div className="relative py-3 px-5 flex items-center justify-center mt-3">
+                <div className="absolute left-12 top-0">
+                  <LeftRectangle />
+                </div>
+                <Image
+                  src={"/prestasi.png"}
+                  alt="Acara"
+                  width={300}
+                  height={300}
+                />
+                <div className="absolute right-12 bottom-0">
+                  <RightRectangle />
+                </div>
+              </div>
+              <div className="px-5 mt-3 flex flex-col font-poppins text-[#1B1508] text-[15px] font-semibold text-justify">
+                <p>{events && events[currentIndex].description}</p>
+              </div>
             </div>
           </div>
         </div>
