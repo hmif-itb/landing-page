@@ -40,7 +40,7 @@ const CurrentEvent = () => {
               profesional dan kemampuan dalam rumpun keinformatikaan yang
               diminati
             </p>
-            <button className="rounded-[20px] bg-[#966F16] w-[150px] md:w-[300px] h-[27px] md:h-[50px] shadow-1xl mt-3">
+            <button className="md:self-start rounded-[20px] bg-[#966F16] w-[150px] md:w-[300px] h-[27px] md:h-[50px] shadow-1xl mt-5">
               <p className="text-[11px] md:text-[15px] font-poppins text-[#1B1508] font-semibold text-[#FBE3A1]">
                 Lihat acara lainnya
               </p>
