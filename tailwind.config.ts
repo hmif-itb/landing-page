@@ -37,10 +37,14 @@ const config: Config = {
         "3/4" : "75%",
       },
       borderRadius:{
-        "30px" : "30px"
+        "30px" : "30px",
+        "20px" : "20px"
       },
       height:{
         "7/8" :"87%"
+      },
+      borderWidth:{
+        "0.7" : "0.7px"
       }
     },
   },
