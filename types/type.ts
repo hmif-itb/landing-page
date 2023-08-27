@@ -3,6 +3,7 @@ export interface DataEvent {
   subtitle: string;
   date: Date;
   description: string;
+  image : string;
 }
 
 export interface DataAchivement{

@@ -65,22 +65,22 @@ function Navbar() {
                 </div>
               </div>
               <div className="w-full flex flex-col mt-4">
-                <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]">
+                <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]" onClick={()=>router.push("/")}>
                   <p className="font-bold text-[15px] font-poppins text-[#966F16]">
                     Tentang
                   </p>
                 </div>
-                <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]">
+                <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]" onClick={()=>router.push("/acara")}>
                   <p className="font-bold text-[15px] font-poppins text-[#966F16]">
                     Acara
                   </p>
                 </div>
-                <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]">
+                <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]" onClick={()=>router.push("/prestasi")}>
                   <p className="font-bold text-[15px] font-poppins text-[#966F16]">
                     Prestasi
                   </p>
                 </div>
-                <div className="w-full text-right py-3">
+                <div className="w-full text-right py-3" onClick={()=>router.push("/kebutuhan-surat")}>
                   <p className="font-bold text-[15px] font-poppins text-[#966F16]">
                     Kebutuhan Surat
                   </p>

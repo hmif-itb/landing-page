@@ -45,7 +45,7 @@ const config: Config = {
       },
       borderWidth:{
         "0.7" : "0.7px"
-      }
+      },
     },
   },
   plugins: [],

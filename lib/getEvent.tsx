@@ -1,4 +1,4 @@
-import { DataEvent, EventDate, Page, Text, Title } from "@/types/type";
+import { DataEvent, EventDate, Image, Page, Text, Title } from "@/types/type";
 import { Client } from "@notionhq/client";
 
 export default async function getEvent() {
@@ -26,6 +26,7 @@ export default async function getEvent() {
         );
         // Destructure name property
         const name = properties["Name"] as Title;
+        const image = properties["Image"] as Image;
         const nameValue = name.title[0].plain_text;
 
         // Destructure the description property
@@ -35,12 +36,16 @@ export default async function getEvent() {
         // Destrucutre the subtitle propery
         const subtitle = properties["subtitle"] as Text;
         const subtitleValue = subtitle.rich_text[0].plain_text;
+
+        // Destucture the image property
+        const imageValue = image.files[0].file.url
         
         dataEvents.push({
             name : nameValue,
             subtitle : subtitleValue,
             date : dateFormatted,
-            description : descValue
+            description : descValue,
+            image : imageValue
         })
       } catch (error) {}
     });
