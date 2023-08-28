@@ -42,15 +42,15 @@ export default function PrestasiSlider({ achievements }: SliderProps) {
       <div className="absolute -bottom-32 right-0">
         <Ellipse5 />
       </div>
-      <div className="absolute -bottom-4 right-6">
-        <Image src={"/trophy-3.svg"} width={120} height={120} alt="trophy" />
-      </div>
-      <div className="absolute -top-8 left-6">
+      <div className="absolute -right-4 -bottom-4 md:right-6">
         <Image src={"/trophy-2.svg"} width={120} height={120} alt="trophy" />
+      </div>
+      <div className="absolute -left-8 -top-8 md:left-6">
+        <Image src={"/trophy-3.svg"} width={120} height={120} alt="trophy" />
       </div>
       <PrevArrow prevPage={prevPage} />
       <NextArrow nextPage={nextPage} />
-      <div className="flex bg-[#FBE3A1] z-10 h-[90vh] w-3/4 transition duration-500 rounded-[30px]">
+      <div className="flex bg-[#FBE3A1] z-10 h-fit lg:h-[90vh] w-3/4 transition duration-150 ease-in-out rounded-[30px]">
         <div className="w-full px-10 py-6 h-[80vh]">
           <div className="h-1/6">
             {achievements && (

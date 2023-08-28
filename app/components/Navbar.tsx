@@ -3,10 +3,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
-function NavbarText(content: string) {
-  return <p className="mx-2">{content}</p>;
-}
-
 function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
@@ -115,7 +111,7 @@ function Navbar() {
         <p
           className="ml-6 text-[12px] lg:text-[15px]"
           onClick={() => router.push("/kebutuhan-surat")}
-          style={{ color: selected === "surat" ? "#966F16" : "#1B1508" }}
+          style={{ color: selected === "kebutuhan-surat" ? "#966F16" : "#1B1508" }}
         >
           Kebutuhan Surat
         </p>

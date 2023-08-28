@@ -1,9 +1,15 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import LeftRectangle from "./LeftRectangle";
 import RightRectangle from "./RightRectangle";
-
-const CurrentEvent = () => {
+import { DataEvent } from "@/types/type";
+import { useRouter } from "next/navigation";
+interface CurrentEvent {
+  event: DataEvent;
+}
+const CurrentEvent = ({ event }: CurrentEvent) => {
+  const router = useRouter();
   return (
     <div className="relative md:h-fit md:pb-3 lg:min-h-[90vh] bg-[#FBE3A1] max-w-screen pt-2">
       <div className="hidden md:block absolute -top-16 z-10">
@@ -17,30 +23,14 @@ const CurrentEvent = () => {
           Kegiatan yang sedang berjalan
         </p>
         <p className="self-end mt-4 text-[15px] md:text-[40px] text-right text-transparent bg-clip-text bg-gradient-to-b from-[#5D42E1] to-[#966F16] font-StretchPro">
-          SPARTA HMIF 2022
+          {event.name}
         </p>
         <div className="w-full flex flex-col-reverse md:grid md:grid-cols-2 md:min-h-[60vh] gap-x-4">
-          <div className="text-[11px] md:text-[15px] py-4 px-5 flex items-center mt-3 font-poppins text-[#1B1508] font-semibold text-justify flex flex-col">
+          <div className="text-[11px] md:text-[15px] py-4 px-5 flex items-center md:items-start justify-center mt-3 font-poppins text-[#1B1508] font-semibold text-justify flex flex-col">
             <p>
-              SPARTA (Simulasi dan Pelatihan Keorganisasian Untuk Anggota)
-              adalah kaderisasi tahap awal pada rangkaian masa orientasi anggota
-              muda Himpunan Mahasiswa Informatika ITB
-              <br />
-              <br />
-              VISI Mewujudkan SPARTA HMIF ITB 2022 sebagai katalisator gelora
-              berkemahasiswaan adiwidia demi mencapai tujuan HMIF ITB dan
-              kebutuhan anggotanya.
-              <br />
-              <br />
-              MISI Memperkenalkan HMIF ITB untuk keberlanjutan asas-asas dan
-              nilai kulturalnya Menanamkan gelora berkemahasiswaan adiwidia
-              sebagai upaya kontribusi mahasiswa intelektual yang dapat
-              memberikan dampak Menginisiasi dan membangun rasa kekeluargaan
-              antar setiap anggota HMIF yang terlibat Mengembangkan sikap
-              profesional dan kemampuan dalam rumpun keinformatikaan yang
-              diminati
+              {event.description} 
             </p>
-            <button className="md:self-start rounded-[20px] bg-[#966F16] w-[150px] md:w-[300px] h-[27px] md:h-[50px] shadow-1xl mt-5">
+            <button className="md:self-start rounded-[20px] bg-[#966F16] w-[150px] md:w-[300px] h-[27px] md:h-[50px] shadow-1xl mt-5" onClick={()=>router.push("/acara")}>
               <p className="text-[11px] md:text-[15px] font-poppins text-[#1B1508] font-semibold text-[#FBE3A1]">
                 Lihat acara lainnya
               </p>
@@ -52,11 +42,11 @@ const CurrentEvent = () => {
                 <LeftRectangle />
               </div>
               <div className="z-20">
-                <Image
-                  src={"/SPARTA1.png"}
+                <img
+                  src={event.image}
                   width={250}
                   height={380}
-                  alt="Foto About Us"
+                  alt={event.description}
                 />
               </div>
               <div className="absolute bottom-0 right-0">
