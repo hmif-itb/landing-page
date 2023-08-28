@@ -37,7 +37,7 @@ const CurrentEvent = ({ event }: CurrentEvent) => {
             </button>
           </div>
           <div className="py-4 px-5 flex items-center justify-center mt-3">
-            <div className="relative py-4 px-5 w-fit">
+            <div className="relative py-4 px-5 w-fit z-20">
               <div className="absolute top-0 left-0">
                 <LeftRectangle />
               </div>

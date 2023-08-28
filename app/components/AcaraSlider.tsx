@@ -1,8 +1,7 @@
 "use client";
-import getEvent from "@/lib/getEvent";
 import { DataEvent } from "@/types/type";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PrevArrow from "./PrevArrow";
 import NextArrow from "./NextArrow";
 import LeftRectangle from "./LeftRectangle";
@@ -90,7 +89,7 @@ export default function AcaraSlider({ events }: SliderProps) {
                 <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-[#5D42E1] to-[#966F16] z-30 font-StretchPro text-left text-[15px] md:text-[40px]">
                   {events[currentIndex].name}
                 </h1>
-                <p className="font-poppins text-[#1B1508] text-[10px] md:text-[18px] font-semibold text-left">
+                <p className="font-poppins mt-3 text-[#1B1508] text-[10px] md:text-[18px] font-semibold text-left">
                   {events[currentIndex].subtitle}
                 </p>
               </>
