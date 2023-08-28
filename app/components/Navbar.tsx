@@ -66,22 +66,22 @@ function Navbar() {
               </div>
               <div className="w-full flex flex-col mt-4">
                 <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]" onClick={()=>router.push("/")}>
-                  <p className="font-bold text-[15px] font-poppins text-[#966F16]">
+                  <p className="font-bold text-[12px] lg:text-[15px] font-poppins text-[#966F16]">
                     Tentang
                   </p>
                 </div>
                 <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]" onClick={()=>router.push("/acara")}>
-                  <p className="font-bold text-[15px] font-poppins text-[#966F16]">
+                  <p className="font-bold text-[12px] lg:text-[15px] font-poppins text-[#966F16]">
                     Acara
                   </p>
                 </div>
                 <div className="w-full text-right py-3 border-b-0.7 border-b-[#966F16]" onClick={()=>router.push("/prestasi")}>
-                  <p className="font-bold text-[15px] font-poppins text-[#966F16]">
+                  <p className="font-bold text-[12px] lg:text-[15px] font-poppins text-[#966F16]">
                     Prestasi
                   </p>
                 </div>
                 <div className="w-full text-right py-3" onClick={()=>router.push("/kebutuhan-surat")}>
-                  <p className="font-bold text-[15px] font-poppins text-[#966F16]">
+                  <p className="font-bold text-[12px] lg:text-[15px] font-poppins text-[#966F16]">
                     Kebutuhan Surat
                   </p>
                 </div>
@@ -92,29 +92,29 @@ function Navbar() {
       )}
       <div className="hidden md:flex absolute right-3 flex-row h-full mr-14 items-center font-StretchPro cursor-pointer">
         <p
-          className="mx-6 text-lg"
+          className="mx-6 text-[12px] lg:text-[15px]"
           onClick={() => router.push("/")}
           style={{ color: selected === "" ? "#966F16" : "#1B1508" }}
         >
           Tentang
         </p>
         <p
-          className="mx-6 text-lg"
+          className="mx-6 text-[12px] lg:text-[15px]"
           onClick={() => router.push("/acara")}
           style={{ color: selected === "acara" ? "#966F16" : "#1B1508" }}
         >
           Acara
         </p>
         <p
-          className="mx-6 text-lg"
+          className="mx-6 text-[12px] lg:text-[15px]"
           onClick={() => router.push("/prestasi")}
           style={{ color: selected === "prestasi" ? "#966F16" : "#1B1508" }}
         >
           Prestasi
         </p>
         <p
-          className="ml-6 text-lg"
-          onClick={() => router.push("/surat")}
+          className="ml-6 text-[12px] lg:text-[15px]"
+          onClick={() => router.push("/kebutuhan-surat")}
           style={{ color: selected === "surat" ? "#966F16" : "#1B1508" }}
         >
           Kebutuhan Surat

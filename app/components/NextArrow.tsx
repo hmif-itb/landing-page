@@ -7,7 +7,7 @@ interface NextArrowProps{
 
 const NextArrow = ({nextPage} : NextArrowProps) => {
   return (
-    <div className="hover:opacity-70 absolute right-4 md:right-12 top-2/4 cursor-pointer" onClick={nextPage}>
+    <div className="hover:opacity-70 absolute right-4 lg:right-12 top-2/4 cursor-pointer" onClick={nextPage}>
       <span className="hidden md:block">
         <Image src={"next-arrow.svg"} alt="next arrow" width={80} height={80} />
       </span>

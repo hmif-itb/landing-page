@@ -62,7 +62,7 @@ export default function AcaraSlider({ events }: SliderProps) {
           />
         </span>
       </div>
-      <div className="absolute -top-8 left-6">
+      <div className="absolute -top-8 -left-1.5 md:-left-4 lg:left-6">
         <span className="hidden md:block">
           <Image
             src={"/megaphone-2.svg"}
@@ -97,8 +97,8 @@ export default function AcaraSlider({ events }: SliderProps) {
             )}
           </div>
           <div className="h-5/6 flex flex-col items-center">
-            <div className="w-full flex-col md:grid md:grid-cols-2 min-h-1/2 gap-x-4 font-poppins text-[#1B1508] mt-4 md:mt-8">
-              <div className="relative py-3 px-3 mt-3 flex items-center justify-center">
+            <div className="w-full flex-col lg:grid lg:grid-cols-2 min-h-1/2 gap-x-4 font-poppins text-[#1B1508] mt-4 md:mt-8">
+              <div className="relative py-3 md:py-8 px-3 mt-3 flex items-center justify-center">
                 <div className="absolute left-0 top-0">
                   <LeftRectangle />
                 </div>

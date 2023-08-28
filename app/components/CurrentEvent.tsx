@@ -5,7 +5,7 @@ import RightRectangle from "./RightRectangle";
 
 const CurrentEvent = () => {
   return (
-    <div className="relative md:min-h-[90vh] bg-[#FBE3A1] max-w-screen pt-2">
+    <div className="relative md:h-fit md:pb-3 lg:min-h-[90vh] bg-[#FBE3A1] max-w-screen pt-2">
       <div className="hidden md:block absolute -top-16 z-10">
         <Image width={300} height={300} src={"/Ellipse 4.png"} alt="Ellpise" />
       </div>

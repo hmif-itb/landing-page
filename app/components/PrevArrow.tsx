@@ -7,7 +7,7 @@ interface PrevArrowProps {
 const PrevArrow = ({ prevPage }: PrevArrowProps) => {
   return (
     <div
-      className="hover:opacity-70 absolute left-4 md:left-12 top-2/4 cursor-pointer"
+      className="hover:opacity-70 absolute left-4 lg:left-12 top-2/4 cursor-pointer"
       onClick={prevPage}
     >
       <span className="hidden md:block">

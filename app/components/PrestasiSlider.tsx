@@ -6,6 +6,8 @@ import PrevArrow from "./PrevArrow";
 import NextArrow from "./NextArrow";
 import LeftRectangle from "./LeftRectangle";
 import RightRectangle from "./RightRectangle";
+import Ellipse4 from "./Ellipse4";
+import Ellipse5 from "./Ellipse5";
 
 interface SliderProps {
   achievements: DataAchivement[] | undefined;
@@ -35,10 +37,10 @@ export default function PrestasiSlider({ achievements }: SliderProps) {
   return (
     <div className="relative w-full max-w-screen h-[90vh] mt-12 flex items-center justify-center">
       <div className="absolute -top-20 left-0">
-        <Image src={"/Ellipse 4.png"} width={300} height={300} alt="Ellipse" />
+        <Ellipse4 />
       </div>
       <div className="absolute -bottom-32 right-0">
-        <Image src={"/Ellipse 5.png"} width={300} height={300} alt="Ellipse" />
+        <Ellipse5 />
       </div>
       <div className="absolute -bottom-4 right-6">
         <Image src={"/trophy-3.svg"} width={120} height={120} alt="trophy" />
@@ -52,7 +54,7 @@ export default function PrestasiSlider({ achievements }: SliderProps) {
         <div className="w-full px-10 py-6 h-[80vh]">
           <div className="h-1/6">
             {achievements && (
-              <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-[#5D42E1] to-[#966F16] z-30 font-StretchPro text-left text-[35px]">
+              <h1 className="text-transparent bg-clip-text bg-gradient-to-b from-[#5D42E1] to-[#966F16] z-30 font-StretchPro text-left text-[15px] md:text-[35px]">
                 {achievements[currentIndex].name}
               </h1>
             )}
@@ -74,7 +76,7 @@ export default function PrestasiSlider({ achievements }: SliderProps) {
                     alt={achievements[currentIndex].name}
                   />
                 </div>
-                <div className="flex flex-col font-poppins text-[#1B1508] text-[18px] font-semibold text-center mt-4">
+                <div className="flex flex-col font-poppins text-[#1B1508] text-[11px] md:text-[18px] font-semibold text-center mt-4">
                   <p>Penyelenggara :</p>
                   <p>{achievements[currentIndex].penyelenggara}</p>
                 </div>
